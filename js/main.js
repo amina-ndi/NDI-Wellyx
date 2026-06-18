@@ -133,37 +133,52 @@ function initScrollAnimations() {
 }
 
 function initContactForm() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
+  const forms = document.querySelectorAll('#contactForm');
+  if (!forms.length) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name = form.querySelector('[name="name"]');
-    const email = form.querySelector('[name="email"]');
-    const message = form.querySelector('[name="message"]');
-    let valid = true;
-
-    form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
-
-    if (!name.value.trim()) { name.classList.add('is-invalid'); valid = false; }
-    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-      email.classList.add('is-invalid'); valid = false;
+  forms.forEach(form => {
+    const nextInput = form.querySelector('.formsubmit-next');
+    if (nextInput) {
+      const hash = form.closest('#contact') ? '#contact' : '';
+      nextInput.value = getFormSubmitNextUrl(hash);
     }
-    if (!message.value.trim()) { message.classList.add('is-invalid'); valid = false; }
 
-    if (valid) {
-      const successMsg = document.getElementById('formSuccess');
-      if (successMsg) {
-        successMsg.classList.remove('d-none');
-        form.reset();
-        setTimeout(() => successMsg.classList.add('d-none'), 5000);
-      } else {
-        alert('Thank you! Your message has been sent successfully.');
-        form.reset();
+    form.addEventListener('submit', (e) => {
+      const name = form.querySelector('[name="name"]');
+      const email = form.querySelector('[name="email"]');
+      const message = form.querySelector('[name="message"]');
+      let valid = true;
+
+      form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+
+      if (!name?.value.trim()) { name.classList.add('is-invalid'); valid = false; }
+      if (!email?.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        email.classList.add('is-invalid'); valid = false;
+      }
+      if (!message?.value.trim()) { message.classList.add('is-invalid'); valid = false; }
+
+      if (!valid) e.preventDefault();
+    });
+  });
+
+  if (new URLSearchParams(window.location.search).get('success') === '1') {
+    const successMsg = document.getElementById('formSuccess');
+    if (successMsg) {
+      successMsg.classList.remove('d-none');
+      if (window.location.hash) {
+        document.querySelector(window.location.hash)?.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  });
+    window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+  }
+}
+
+function getFormSubmitNextUrl(hash = '') {
+  if (window.location.protocol === 'file:') return '';
+  const url = new URL(window.location.href);
+  url.searchParams.set('success', '1');
+  url.hash = hash;
+  return url.toString();
 }
 
 function initNewsletterForm() {

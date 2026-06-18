@@ -1,0 +1,98 @@
+<section class="page-hero">
+    <div class="container fade-in">
+      <div class="breadcrumb-custom"><a routerLink="/">Home</a> <span>/</span> <span>Portfolio</span></div>
+      <h1 class="section-heading">Our Portfolio</h1>
+      <p>Proof of our capability — real projects delivering measurable business results.</p>
+    </div>
+  </section>
+
+  <section class="portfolio-section" style="padding-top:3rem;">
+    <div class="container">
+      <div class="portfolio-filters fade-in">
+        @for (filter of portfolioFilters; track filter.id) {
+          <button
+            type="button"
+            class="filter-btn"
+            [class.active]="activeFilter === filter.id"
+            (click)="setFilter(filter.id)"
+          >{{ filter.label }}</button>
+        }
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="education" [hidden]="!isVisible('education')">
+          <div class="portfolio-card">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da280a02?w=600&q=80" alt="School Portal" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="industry-tag">Education</span>
+              <h5>School Management Portal</h5>
+              <div class="tech-stack"><span class="tech-tag">.NET</span><span class="tech-tag">React</span></div>
+            </div>
+          </div>
+          <div class="portfolio-info"><h5>School Management Portal</h5><p class="result">Reduced admin work by 70%</p></div>
+        </div>
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="healthcare" [hidden]="!isVisible('healthcare')">
+          <div class="portfolio-card">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Hospital System" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="industry-tag">Healthcare</span>
+              <h5>Hospital Management System</h5>
+              <div class="tech-stack"><span class="tech-tag">Laravel</span><span class="tech-tag">Vue.js</span></div>
+            </div>
+          </div>
+          <div class="portfolio-info"><h5>Hospital Management System</h5><p class="result">Improved patient flow by 45%</p></div>
+        </div>
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="enterprise" [hidden]="!isVisible('enterprise')">
+          <div class="portfolio-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="ERP System" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="industry-tag">Manufacturing</span>
+              <h5>Enterprise ERP System</h5>
+              <div class="tech-stack"><span class="tech-tag">.NET</span><span class="tech-tag">SQL Server</span></div>
+            </div>
+          </div>
+          <div class="portfolio-info"><h5>Enterprise ERP System</h5><p class="result">Streamlined operations by 55%</p></div>
+        </div>
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="ai" [hidden]="!isVisible('ai')">
+          <div class="portfolio-card">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="AI Chatbot" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="industry-tag">Retail</span>
+              <h5>AI Customer Support Bot</h5>
+              <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">OpenAI</span></div>
+            </div>
+          </div>
+          <div class="portfolio-info"><h5>AI Customer Support Bot</h5><p class="result">80% faster response times</p></div>
+        </div>
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="ecommerce" [hidden]="!isVisible('ecommerce')">
+          <div class="portfolio-card">
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" alt="E-commerce" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="industry-tag">E-Commerce</span>
+              <h5>Online Marketplace</h5>
+              <div class="tech-stack"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span></div>
+            </div>
+          </div>
+          <div class="portfolio-info"><h5>Online Marketplace</h5><p class="result">120% increase in online sales</p></div>
+        </div>
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="enterprise" [hidden]="!isVisible('enterprise')">
+          <div class="portfolio-card">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Real Estate CRM" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="industry-tag">Real Estate</span>
+              <h5>Property Management CRM</h5>
+              <div class="tech-stack"><span class="tech-tag">Angular</span><span class="tech-tag">Laravel</span></div>
+            </div>
+          </div>
+          <div class="portfolio-info"><h5>Property Management CRM</h5><p class="result">55% better lead conversion</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container fade-in">
+      <h2 class="section-heading">Have a Project in Mind?</h2>
+      <p>Let's create your next success story together.</p>
+      <a routerLink="/contact" class="btn btn-white"><i class="fas fa-rocket"></i> Start Your Project</a>
+    </div>
+  </section>

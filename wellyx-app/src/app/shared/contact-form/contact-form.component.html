@@ -1,0 +1,71 @@
+<form
+  class="contact-form w-100"
+  action="https://formsubmit.co/noshahidevelopersinc@gmail.com"
+  method="POST"
+  (submit)="onSubmit($event)"
+  #contactForm
+>
+  <input type="hidden" name="_subject" [value]="subject">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" [value]="nextUrl">
+  <input type="text" name="_honey" class="d-none" tabindex="-1" autocomplete="off">
+
+  @if (showTitle) {
+    <h4 class="mb-4">Send Us a Message</h4>
+  }
+
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label">Full Name *</label>
+      <input type="text" class="form-control" name="name" placeholder="John Doe" required #nameInput>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Company Name</label>
+      <input type="text" class="form-control" name="company" placeholder="Your Company">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Email Address *</label>
+      <input type="email" class="form-control" name="email" placeholder="john@company.com" required #emailInput>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" name="phone" placeholder="+1 234 567 8900">
+    </div>
+  @if (showExtendedFields) {
+    <div class="col-md-6">
+      <label class="form-label">Country</label>
+      <input type="text" class="form-control" name="country" placeholder="United States">
+    </div>
+  }
+    <div [class]="showExtendedFields ? 'col-md-6' : 'col-12'">
+      <label class="form-label">Service Required</label>
+      <select class="form-select" name="service">
+        <option value="">Select a service</option>
+        <option>Custom Software Development</option>
+        <option>Web Development</option>
+        <option>Mobile App Development</option>
+        <option>AI &amp; Automation</option>
+        <option>Cloud Solutions</option>
+        <option>UI/UX Design</option>
+        <option>Product Demo</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <label class="form-label">Message *</label>
+      <textarea class="form-control" name="message" rows="4" placeholder="Tell us about your project..." required #messageInput></textarea>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary-custom">
+        <i class="fas fa-paper-plane"></i> Send Message
+      </button>
+    </div>
+    @if (showSuccess) {
+      <div class="col-12">
+        <div class="alert alert-success" role="alert">
+          <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We'll get back to you within 24 hours.
+        </div>
+      </div>
+    }
+  </div>
+</form>

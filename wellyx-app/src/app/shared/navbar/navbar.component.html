@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top" [class.scrolled]="scrolled" [class.navbar-hero-dark]="heroDark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Welly<span class="brand-accent">x</span></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-label="Toggle navigation"
+      (click)="collapseNav()"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" #navbarCollapse>
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeNav()">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="/services" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/services" (click)="closeNav()">All Services</a></li>
+            <li><a class="dropdown-item" routerLink="/services" fragment="custom-software" (click)="closeNav()">Custom Software</a></li>
+            <li><a class="dropdown-item" routerLink="/services" fragment="web-development" (click)="closeNav()">Web Development</a></li>
+            <li><a class="dropdown-item" routerLink="/services" fragment="mobile-apps" (click)="closeNav()">Mobile Apps</a></li>
+            <li><a class="dropdown-item" routerLink="/services" fragment="ai-automation" (click)="closeNav()">AI &amp; Automation</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="/products" data-bs-toggle="dropdown">Products</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/products" (click)="closeNav()">All Products</a></li>
+            <li><a class="dropdown-item" routerLink="/products" (click)="closeNav()">School Management</a></li>
+            <li><a class="dropdown-item" routerLink="/products" (click)="closeNav()">HR Management</a></li>
+            <li><a class="dropdown-item" routerLink="/products" (click)="closeNav()">ERP Solution</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/portfolio" routerLinkActive="active" (click)="closeNav()">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/industries" routerLinkActive="active" (click)="closeNav()">Industries</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="closeNav()">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/blog" routerLinkActive="active" (click)="closeNav()">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="closeNav()">Contact</a>
+        </li>
+      </ul>
+      <a routerLink="/contact" class="btn btn-primary-custom" (click)="closeNav()">Book Consultation</a>
+    </div>
+  </div>
+</nav>

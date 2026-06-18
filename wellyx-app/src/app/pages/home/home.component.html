@@ -1,64 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wellyx Software Inc. delivers custom software development, web applications, mobile apps, AI solutions, and enterprise systems that help businesses innovate, automate, and grow.">
-  <meta name="keywords" content="software development, web development, mobile apps, AI solutions, enterprise software, Wellyx">
-  <meta property="og:title" content="Wellyx Software Inc. - Building Scalable Software Solutions">
-  <meta property="og:description" content="Custom software development, AI solutions, and enterprise systems for business growth.">
-  <meta property="og:type" content="website">
-  <title>Wellyx Software Inc. | Building Scalable Software Solutions</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Welly<span class="brand-accent">x</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="services.html" data-bs-toggle="dropdown">Services</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="services.html">All Services</a></li>
-              <li><a class="dropdown-item" href="services.html#custom-software">Custom Software</a></li>
-              <li><a class="dropdown-item" href="services.html#web-development">Web Development</a></li>
-              <li><a class="dropdown-item" href="services.html#mobile-apps">Mobile Apps</a></li>
-              <li><a class="dropdown-item" href="services.html#ai-automation">AI & Automation</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="products.html" data-bs-toggle="dropdown">Products</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="products.html">All Products</a></li>
-              <li><a class="dropdown-item" href="products.html">School Management</a></li>
-              <li><a class="dropdown-item" href="products.html">HR Management</a></li>
-              <li><a class="dropdown-item" href="products.html">ERP Solution</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary-custom">Book Consultation</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Carousel — 100vh -->
+<!-- Hero Carousel — 100vh -->
   <section class="hero-carousel-section" id="home">
     <div id="heroCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="6500" data-bs-pause="hover">
       <div class="carousel-indicators hero-indicators">
@@ -80,8 +20,8 @@
                   <h1 class="hero-headline">Building software that <span class="highlight">powers growth</span></h1>
                   <p class="hero-subheadline">Custom software, web apps, mobile solutions, and AI systems for businesses ready to scale.</p>
                   <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary-custom">Get Free Consultation</a>
-                    <a href="portfolio.html" class="btn btn-outline-custom">View Our Work</a>
+                    <a routerLink="/contact" class="btn btn-primary-custom">Get Free Consultation</a>
+                    <a routerLink="/portfolio" class="btn btn-outline-custom">View Our Work</a>
                   </div>
                   <div class="hero-stats-row">
                     <div class="floating-stat-card"><span class="stat-number" data-count="100" data-suffix="+">0</span><span class="stat-label">Projects</span></div>
@@ -111,8 +51,8 @@
                   <h1 class="hero-headline">Intelligent systems that <span class="highlight">work for you</span></h1>
                   <p class="hero-subheadline">From AI chatbots to workflow automation — we help you reduce costs, save time, and make smarter decisions.</p>
                   <div class="hero-buttons">
-                    <a href="services.html" class="btn btn-primary-custom">Explore AI Solutions</a>
-                    <a href="contact.html" class="btn btn-outline-white">Book a Demo</a>
+                    <a routerLink="/services" class="btn btn-primary-custom">Explore AI Solutions</a>
+                    <a routerLink="/contact" class="btn btn-outline-white">Book a Demo</a>
                   </div>
                   <div class="hero-trust-badges">
                     <span><i class="fas fa-check"></i> Chatbots & Assistants</span>
@@ -142,8 +82,8 @@
                   <h1 class="hero-headline">Scale with <span class="highlight">confidence</span></h1>
                   <p class="hero-subheadline">ERP, CRM, school management, and industry-specific platforms built for reliability, security, and long-term growth.</p>
                   <div class="hero-buttons">
-                    <a href="products.html" class="btn btn-primary-custom">View Products</a>
-                    <a href="contact.html" class="btn btn-outline-custom">Request Proposal</a>
+                    <a routerLink="/products" class="btn btn-primary-custom">View Products</a>
+                    <a routerLink="/contact" class="btn btn-outline-custom">Request Proposal</a>
                   </div>
                   <div class="hero-trust-badges hero-trust-badges-dark">
                     <span><i class="fas fa-shield-alt"></i> Enterprise Security</span>
@@ -163,7 +103,7 @@
 
       </div>
     </div>
-    <a href="#proof" class="hero-scroll-hint" aria-label="Scroll down">
+    <a routerLink="/" fragment="proof" class="hero-scroll-hint" aria-label="Scroll down">
       <span>Scroll</span>
       <i class="fas fa-chevron-down"></i>
     </a>
@@ -272,7 +212,7 @@
                   <div class="service-icon"><i class="fas fa-code"></i></div>
                   <h4>Custom Software</h4>
                   <p>Tailored web, desktop, and enterprise solutions for unique business challenges.</p>
-                  <a href="services.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                  <a routerLink="/services" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
               <div class="col-md-4">
@@ -280,7 +220,7 @@
                   <div class="service-icon"><i class="fas fa-globe"></i></div>
                   <h4>Web Development</h4>
                   <p>Corporate sites, e-commerce platforms, and CMS with modern responsive design.</p>
-                  <a href="services.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                  <a routerLink="/services" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
               <div class="col-md-4">
@@ -288,7 +228,7 @@
                   <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
                   <h4>Mobile Apps</h4>
                   <p>Native and cross-platform apps with exceptional user experiences.</p>
-                  <a href="services.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                  <a routerLink="/services" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -300,7 +240,7 @@
                   <div class="service-icon"><i class="fas fa-robot"></i></div>
                   <h4>AI & Automation</h4>
                   <p>Intelligent chatbots and AI integrations to streamline operations.</p>
-                  <a href="services.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                  <a routerLink="/services" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
               <div class="col-md-4">
@@ -308,7 +248,7 @@
                   <div class="service-icon"><i class="fas fa-cloud"></i></div>
                   <h4>Cloud Solutions</h4>
                   <p>Migration, hosting, and DevOps for scalable secure infrastructure.</p>
-                  <a href="services.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                  <a routerLink="/services" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
               <div class="col-md-4">
@@ -316,7 +256,7 @@
                   <div class="service-icon"><i class="fas fa-palette"></i></div>
                   <h4>UI/UX Design</h4>
                   <p>Wireframing, prototyping, and design systems for intuitive experiences.</p>
-                  <a href="services.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                  <a routerLink="/services" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -328,7 +268,7 @@
                   <div class="service-icon"><i class="fas fa-database"></i></div>
                   <h4>Data Solutions</h4>
                   <p>Database design, analytics dashboards, and business intelligence tools.</p>
-                  <a href="services.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                  <a routerLink="/services" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
               <div class="col-md-4">
@@ -336,7 +276,7 @@
                   <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
                   <h4>Security & QA</h4>
                   <p>Penetration testing, code audits, and quality assurance processes.</p>
-                  <a href="services.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                  <a routerLink="/services" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
               <div class="col-md-4">
@@ -344,7 +284,7 @@
                   <div class="service-icon"><i class="fas fa-cogs"></i></div>
                   <h4>Maintenance</h4>
                   <p>Long-term support, updates, and performance optimization.</p>
-                  <a href="services.html" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                  <a routerLink="/services" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -382,7 +322,7 @@
                   <div class="product-body">
                     <h4>School Management</h4>
                     <p>Administration, attendance, and academic management.</p>
-                    <a href="contact.html" class="btn btn-primary-custom btn-sm">Request Demo</a>
+                    <a routerLink="/contact" class="btn btn-primary-custom btn-sm">Request Demo</a>
                   </div>
                 </div>
               </div>
@@ -392,7 +332,7 @@
                   <div class="product-body">
                     <h4>Fee Management</h4>
                     <p>Automated fee collection and financial reporting.</p>
-                    <a href="contact.html" class="btn btn-primary-custom btn-sm">Request Demo</a>
+                    <a routerLink="/contact" class="btn btn-primary-custom btn-sm">Request Demo</a>
                   </div>
                 </div>
               </div>
@@ -402,7 +342,7 @@
                   <div class="product-body">
                     <h4>HR Management</h4>
                     <p>Recruitment, payroll, and employee lifecycle.</p>
-                    <a href="contact.html" class="btn btn-primary-custom btn-sm">Request Demo</a>
+                    <a routerLink="/contact" class="btn btn-primary-custom btn-sm">Request Demo</a>
                   </div>
                 </div>
               </div>
@@ -416,7 +356,7 @@
                   <div class="product-body">
                     <h4>ERP Solution</h4>
                     <p>Finance, inventory, and operations in one platform.</p>
-                    <a href="contact.html" class="btn btn-primary-custom btn-sm">Request Demo</a>
+                    <a routerLink="/contact" class="btn btn-primary-custom btn-sm">Request Demo</a>
                   </div>
                 </div>
               </div>
@@ -426,7 +366,7 @@
                   <div class="product-body">
                     <h4>CRM Platform</h4>
                     <p>Leads, sales pipeline, and customer analytics.</p>
-                    <a href="contact.html" class="btn btn-primary-custom btn-sm">Request Demo</a>
+                    <a routerLink="/contact" class="btn btn-primary-custom btn-sm">Request Demo</a>
                   </div>
                 </div>
               </div>
@@ -436,7 +376,7 @@
                   <div class="product-body">
                     <h4>Inventory Management</h4>
                     <p>Real-time stock tracking and warehouse control.</p>
-                    <a href="contact.html" class="btn btn-primary-custom btn-sm">Request Demo</a>
+                    <a routerLink="/contact" class="btn btn-primary-custom btn-sm">Request Demo</a>
                   </div>
                 </div>
               </div>
@@ -524,28 +464,28 @@
       </div>
       <div class="row g-4">
         <div class="col-6 col-md-4 col-lg-3 fade-in">
-          <a href="industries.html"><div class="industry-card"><i class="fas fa-graduation-cap"></i><h5>Education</h5></div></a>
+          <a routerLink="/industries"><div class="industry-card"><i class="fas fa-graduation-cap"></i><h5>Education</h5></div></a>
         </div>
         <div class="col-6 col-md-4 col-lg-3 fade-in">
-          <a href="industries.html"><div class="industry-card"><i class="fas fa-heartbeat"></i><h5>Healthcare</h5></div></a>
+          <a routerLink="/industries"><div class="industry-card"><i class="fas fa-heartbeat"></i><h5>Healthcare</h5></div></a>
         </div>
         <div class="col-6 col-md-4 col-lg-3 fade-in">
-          <a href="industries.html"><div class="industry-card"><i class="fas fa-shopping-cart"></i><h5>Retail</h5></div></a>
+          <a routerLink="/industries"><div class="industry-card"><i class="fas fa-shopping-cart"></i><h5>Retail</h5></div></a>
         </div>
         <div class="col-6 col-md-4 col-lg-3 fade-in">
-          <a href="industries.html"><div class="industry-card"><i class="fas fa-building"></i><h5>Real Estate</h5></div></a>
+          <a routerLink="/industries"><div class="industry-card"><i class="fas fa-building"></i><h5>Real Estate</h5></div></a>
         </div>
         <div class="col-6 col-md-4 col-lg-3 fade-in">
-          <a href="industries.html"><div class="industry-card"><i class="fas fa-chart-line"></i><h5>Finance</h5></div></a>
+          <a routerLink="/industries"><div class="industry-card"><i class="fas fa-chart-line"></i><h5>Finance</h5></div></a>
         </div>
         <div class="col-6 col-md-4 col-lg-3 fade-in">
-          <a href="industries.html"><div class="industry-card"><i class="fas fa-industry"></i><h5>Manufacturing</h5></div></a>
+          <a routerLink="/industries"><div class="industry-card"><i class="fas fa-industry"></i><h5>Manufacturing</h5></div></a>
         </div>
         <div class="col-6 col-md-4 col-lg-3 fade-in">
-          <a href="industries.html"><div class="industry-card"><i class="fas fa-truck"></i><h5>Logistics</h5></div></a>
+          <a routerLink="/industries"><div class="industry-card"><i class="fas fa-truck"></i><h5>Logistics</h5></div></a>
         </div>
         <div class="col-6 col-md-4 col-lg-3 fade-in">
-          <a href="industries.html"><div class="industry-card"><i class="fas fa-briefcase"></i><h5>Corporate</h5></div></a>
+          <a routerLink="/industries"><div class="industry-card"><i class="fas fa-briefcase"></i><h5>Corporate</h5></div></a>
         </div>
       </div>
     </div>
@@ -577,7 +517,7 @@
                   <span><strong>45%</strong> more engagement</span>
                   <span><strong>React</strong> + .NET</span>
                 </div>
-                <a href="portfolio.html" class="btn btn-outline-custom btn-sm">View case study</a>
+                <a routerLink="/portfolio" class="btn btn-outline-custom btn-sm">View case study</a>
               </div>
             </div>
           </div>
@@ -592,7 +532,7 @@
                   <span><strong>70%</strong> less manual work</span>
                   <span><strong>.NET</strong> + SQL</span>
                 </div>
-                <a href="portfolio.html" class="btn btn-outline-custom btn-sm">View case study</a>
+                <a routerLink="/portfolio" class="btn btn-outline-custom btn-sm">View case study</a>
               </div>
             </div>
           </div>
@@ -607,7 +547,7 @@
                   <span><strong>80%</strong> faster response</span>
                   <span><strong>Python</strong> + OpenAI</span>
                 </div>
-                <a href="portfolio.html" class="btn btn-outline-custom btn-sm">View case study</a>
+                <a routerLink="/portfolio" class="btn btn-outline-custom btn-sm">View case study</a>
               </div>
             </div>
           </div>
@@ -621,14 +561,17 @@
       </div>
 
       <div class="portfolio-filters fade-in">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web Apps</button>
-        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-        <button class="filter-btn" data-filter="enterprise">Enterprise</button>
-        <button class="filter-btn" data-filter="ai">AI Solutions</button>
+        @for (filter of portfolioFilters; track filter.id) {
+          <button
+            type="button"
+            class="filter-btn"
+            [class.active]="activeFilter === filter.id"
+            (click)="setFilter(filter.id)"
+          >{{ filter.label }}</button>
+        }
       </div>
       <div class="row g-4">
-        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="web">
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="web" [hidden]="!isPortfolioVisible('web')">
           <div class="portfolio-card">
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="E-Learning Platform" loading="lazy">
             <div class="portfolio-overlay">
@@ -639,7 +582,7 @@
                 <span class="tech-tag">.NET</span>
                 <span class="tech-tag">Azure</span>
               </div>
-              <a href="portfolio.html" class="btn btn-primary-custom btn-sm">View Case Study</a>
+              <a routerLink="/portfolio" class="btn btn-primary-custom btn-sm">View Case Study</a>
             </div>
           </div>
           <div class="portfolio-info">
@@ -647,7 +590,7 @@
             <p class="result">Increased student engagement by 45%</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="mobile">
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="mobile" [hidden]="!isPortfolioVisible('mobile')">
           <div class="portfolio-card">
             <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80" alt="Healthcare App" loading="lazy">
             <div class="portfolio-overlay">
@@ -657,7 +600,7 @@
                 <span class="tech-tag">Flutter</span>
                 <span class="tech-tag">Laravel</span>
               </div>
-              <a href="portfolio.html" class="btn btn-primary-custom btn-sm">View Case Study</a>
+              <a routerLink="/portfolio" class="btn btn-primary-custom btn-sm">View Case Study</a>
             </div>
           </div>
           <div class="portfolio-info">
@@ -665,7 +608,7 @@
             <p class="result">Reduced appointment wait time by 60%</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="enterprise">
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="enterprise" [hidden]="!isPortfolioVisible('enterprise')">
           <div class="portfolio-card">
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="ERP System" loading="lazy">
             <div class="portfolio-overlay">
@@ -675,7 +618,7 @@
                 <span class="tech-tag">.NET</span>
                 <span class="tech-tag">SQL Server</span>
               </div>
-              <a href="portfolio.html" class="btn btn-primary-custom btn-sm">View Case Study</a>
+              <a routerLink="/portfolio" class="btn btn-primary-custom btn-sm">View Case Study</a>
             </div>
           </div>
           <div class="portfolio-info">
@@ -683,7 +626,7 @@
             <p class="result">Reduced manual work by 70%</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="ai">
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="ai" [hidden]="!isPortfolioVisible('ai')">
           <div class="portfolio-card">
             <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="AI Chatbot" loading="lazy">
             <div class="portfolio-overlay">
@@ -693,7 +636,7 @@
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">OpenAI</span>
               </div>
-              <a href="portfolio.html" class="btn btn-primary-custom btn-sm">View Case Study</a>
+              <a routerLink="/portfolio" class="btn btn-primary-custom btn-sm">View Case Study</a>
             </div>
           </div>
           <div class="portfolio-info">
@@ -701,7 +644,7 @@
             <p class="result">Improved response time by 80%</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="web">
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="web" [hidden]="!isPortfolioVisible('web')">
           <div class="portfolio-card">
             <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" alt="E-commerce Platform" loading="lazy">
             <div class="portfolio-overlay">
@@ -711,7 +654,7 @@
                 <span class="tech-tag">React</span>
                 <span class="tech-tag">Node.js</span>
               </div>
-              <a href="portfolio.html" class="btn btn-primary-custom btn-sm">View Case Study</a>
+              <a routerLink="/portfolio" class="btn btn-primary-custom btn-sm">View Case Study</a>
             </div>
           </div>
           <div class="portfolio-info">
@@ -719,7 +662,7 @@
             <p class="result">Increased online sales by 120%</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="enterprise">
+        <div class="col-md-6 col-lg-4 portfolio-item fade-in" data-category="enterprise" [hidden]="!isPortfolioVisible('enterprise')">
           <div class="portfolio-card">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Real Estate CRM" loading="lazy">
             <div class="portfolio-overlay">
@@ -729,7 +672,7 @@
                 <span class="tech-tag">Angular</span>
                 <span class="tech-tag">Laravel</span>
               </div>
-              <a href="portfolio.html" class="btn btn-primary-custom btn-sm">View Case Study</a>
+              <a routerLink="/portfolio" class="btn btn-primary-custom btn-sm">View Case Study</a>
             </div>
           </div>
           <div class="portfolio-info">
@@ -910,8 +853,8 @@
       <h2 class="section-heading">Ready To Transform Your Business?</h2>
       <p>Let's discuss your goals and build technology that creates measurable business results.</p>
       <div class="cta-buttons">
-        <a href="contact.html" class="btn btn-white"><i class="fas fa-calendar-check"></i> Schedule Consultation</a>
-        <a href="contact.html" class="btn btn-outline-white"><i class="fas fa-file-alt"></i> Request Proposal</a>
+        <a routerLink="/contact" class="btn btn-white"><i class="fas fa-calendar-check"></i> Schedule Consultation</a>
+        <a routerLink="/contact" class="btn btn-outline-white"><i class="fas fa-file-alt"></i> Request Proposal</a>
       </div>
       <div class="cta-trust-badges">
         <span><i class="fas fa-check-circle"></i> Free Consultation</span>
@@ -931,58 +874,7 @@
       </div>
       <div class="row g-4 align-items-stretch">
         <div class="col-lg-7 fade-in d-flex">
-          <form class="contact-form w-100" id="contactForm" action="https://formsubmit.co/noshahidevelopersinc@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New inquiry — Wellyx website (Homepage)">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" class="formsubmit-next" value="">
-            <input type="text" name="_honey" class="d-none" tabindex="-1" autocomplete="off">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label class="form-label">Full Name *</label>
-                <input type="text" class="form-control" name="name" placeholder="John Doe" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Company Name</label>
-                <input type="text" class="form-control" name="company" placeholder="Your Company">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Email Address *</label>
-                <input type="email" class="form-control" name="email" placeholder="john@company.com" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" name="phone" placeholder="+1 234 567 8900">
-              </div>
-              <div class="col-12">
-                <label class="form-label">Service Required</label>
-                <select class="form-select" name="service">
-                  <option value="">Select a service</option>
-                  <option>Custom Software Development</option>
-                  <option>Web Development</option>
-                  <option>Mobile App Development</option>
-                  <option>AI & Automation</option>
-                  <option>Cloud Solutions</option>
-                  <option>UI/UX Design</option>
-                  <option>Product Demo</option>
-                </select>
-              </div>
-              <div class="col-12">
-                <label class="form-label">Message *</label>
-                <textarea class="form-control" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-primary-custom">
-                  <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-              </div>
-              <div class="col-12">
-                <div id="formSuccess" class="alert alert-success d-none" role="alert">
-                  <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We'll get back to you within 24 hours.
-                </div>
-              </div>
-            </div>
-          </form>
+          <app-contact-form [subject]="contactSubject" [redirectHash]="contactHash"></app-contact-form>
         </div>
         <div class="col-lg-5 fade-in d-flex">
           <div class="contact-info-card w-100">
@@ -1004,7 +896,7 @@
               <div class="icon"><i class="fas fa-envelope"></i></div>
               <div>
                 <h6>Email</h6>
-                <p>info@wellyx.com</p>
+                <p>info&#64;wellyx.com</p>
               </div>
             </div>
             <div class="contact-info-item">
@@ -1030,64 +922,4 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4 col-md-6">
-          <h5>Welly<span class="text-orange">x</span> Software Inc.</h5>
-          <p>Building scalable software solutions that accelerate business growth. Trusted by startups, enterprises, and institutions worldwide.</p>
-          <form class="newsletter-form mt-3" id="newsletterForm">
-            <input type="email" placeholder="Your email" required aria-label="Email for newsletter">
-            <button type="submit" class="btn btn-primary-custom btn-sm">Subscribe</button>
-          </form>
-        </div>
-        <div class="col-lg-2 col-md-6">
-          <h5>Quick Links</h5>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <h5>Services</h5>
-          <ul class="footer-links">
-            <li><a href="services.html">Custom Software</a></li>
-            <li><a href="services.html">Web Development</a></li>
-            <li><a href="services.html">Mobile Apps</a></li>
-            <li><a href="services.html">AI & Automation</a></li>
-            <li><a href="services.html">Cloud Solutions</a></li>
-            <li><a href="services.html">UI/UX Design</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <h5>Contact</h5>
-          <ul class="footer-links">
-            <li><i class="fas fa-map-marker-alt text-orange me-2"></i> San Francisco, CA</li>
-            <li><i class="fas fa-phone text-orange me-2"></i> +1 (555) 123-4567</li>
-            <li><i class="fas fa-envelope text-orange me-2"></i> info@wellyx.com</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Wellyx Software Inc. All Rights Reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
   <!-- WhatsApp Float Button -->
-  <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>

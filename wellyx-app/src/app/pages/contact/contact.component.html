@@ -1,0 +1,86 @@
+<section class="page-hero">
+    <div class="container fade-in">
+      <div class="breadcrumb-custom"><a routerLink="/">Home</a> <span>/</span> <span>Contact</span></div>
+      <h1 class="section-heading">Get In Touch</h1>
+      <p>Ready to start your project? We'd love to hear from you. Get a free consultation today.</p>
+    </div>
+  </section>
+
+  <section class="contact-section" style="padding-top:3rem;">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-7 fade-in d-flex">
+          <app-contact-form [subject]="contactSubject" [redirectHash]="contactHash" [showTitle]="true" [showExtendedFields]="true"></app-contact-form>
+        </div>
+        <div class="col-lg-5 fade-in d-flex">
+          <div class="contact-info-card w-100">
+            <h4 class="mb-4">Contact Information</h4>
+            <div class="contact-info-item">
+              <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div><h6>Office Address</h6><p>123 Tech Park Avenue, Suite 500<br>San Francisco, CA 94105, USA</p></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon"><i class="fas fa-phone"></i></div>
+              <div><h6>Phone</h6><p>+1 (555) 123-4567</p></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon"><i class="fas fa-envelope"></i></div>
+              <div><h6>Email</h6><p>info&#64;wellyx.com<br>sales&#64;wellyx.com</p></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon"><i class="fas fa-clock"></i></div>
+              <div><h6>Business Hours</h6><p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 2:00 PM</p></div>
+            </div>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/15551234567" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="map-placeholder">
+              <iframe src="https://maps.google.com/maps?q=San+Francisco&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" title="Office location"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light-custom">
+    <div class="container">
+      <div class="text-center fade-in">
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-8 fade-in">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">How much does a custom software project cost?</button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Project costs vary based on complexity, features, and timeline. We provide detailed quotations after understanding your requirements during a free consultation.</div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What is your typical project timeline?</button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Timelines range from 4-8 weeks for simple projects to 3-6 months for complex enterprise solutions. We provide a detailed timeline during the planning phase.</div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Do you provide post-launch support?</button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Yes, we offer comprehensive post-launch support including maintenance, updates, bug fixes, and feature enhancements through flexible support packages.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

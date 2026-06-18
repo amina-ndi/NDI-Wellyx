@@ -1,0 +1,51 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <h5>Welly<span class="text-orange">x</span> Software Inc.</h5>
+        <p>Building scalable software solutions that accelerate business growth. Trusted by startups, enterprises, and institutions worldwide.</p>
+        <form class="newsletter-form mt-3" (submit)="onNewsletterSubmit($event)">
+          <input type="email" placeholder="Your email" required aria-label="Email for newsletter" [(ngModel)]="newsletterEmail" name="newsletterEmail" [class.is-invalid]="newsletterInvalid">
+          <button type="submit" class="btn btn-primary-custom btn-sm">Subscribe</button>
+        </form>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/portfolio">Portfolio</a></li>
+          <li><a routerLink="/careers">Careers</a></li>
+          <li><a routerLink="/blog">Blog</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Services</h5>
+        <ul class="footer-links">
+          <li><a routerLink="/services">Custom Software</a></li>
+          <li><a routerLink="/services">Web Development</a></li>
+          <li><a routerLink="/services">Mobile Apps</a></li>
+          <li><a routerLink="/services">AI &amp; Automation</a></li>
+          <li><a routerLink="/services">Cloud Solutions</a></li>
+          <li><a routerLink="/services">UI/UX Design</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Contact</h5>
+        <ul class="footer-links">
+          <li><i class="fas fa-map-marker-alt text-orange me-2"></i> San Francisco, CA</li>
+          <li><i class="fas fa-phone text-orange me-2"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-envelope text-orange me-2"></i> info&#64;wellyx.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Wellyx Software Inc. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
