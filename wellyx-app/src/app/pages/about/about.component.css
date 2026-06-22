@@ -1,0 +1,12 @@
+.border-red-custom {
+  border-color: red !important;
+  transition: border-color 0.3s ease;
+}
+
+.border-red-custom:hover {
+  border-color: var(--orange) !important;
+}
+
+.section-badge {
+  color: red !important;
+}

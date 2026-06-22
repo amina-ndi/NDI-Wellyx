@@ -1,6 +1,6 @@
 <!-- Hero Carousel — 100vh -->
   <section class="hero-carousel-section" id="home">
-    <div id="heroCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="6500" data-bs-pause="hover">
+    <div id="heroCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="3500" data-bs-pause="false">
       <div class="carousel-indicators hero-indicators">
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -16,17 +16,26 @@
             <div class="container hero-slide-container">
               <div class="row align-items-center g-4 g-lg-5">
                 <div class="col-lg-6 hero-content">
-                  <span class="section-label">Software Development Partner</span>
+                  <span class="section-label hero-label-gradient">Software Development Partner</span>
                   <h1 class="hero-headline">Building software that <span class="highlight">powers growth</span></h1>
                   <p class="hero-subheadline">Custom software, web apps, mobile solutions, and AI systems for businesses ready to scale.</p>
                   <div class="hero-buttons">
                     <a routerLink="/contact" class="btn btn-primary-custom">Get Free Consultation</a>
                     <a routerLink="/portfolio" class="btn btn-outline-custom">View Our Work</a>
                   </div>
-                  <div class="hero-stats-row">
-                    <div class="floating-stat-card"><span class="stat-number" data-count="100" data-suffix="+">0</span><span class="stat-label">Projects</span></div>
-                    <div class="floating-stat-card"><span class="stat-number" data-count="50" data-suffix="+">0</span><span class="stat-label">Clients</span></div>
-                    <div class="floating-stat-card"><span class="stat-number" data-count="95" data-suffix="%">0</span><span class="stat-label">Satisfaction</span></div>
+                  <div class="hero-trust-badges hero-trust-professional">
+                    <div class="trust-badge-item trust-badge-gradient">
+                      <i class="fas fa-check-circle"></i>
+                      <span>100+ Projects Delivered</span>
+                    </div>
+                    <div class="trust-badge-item trust-badge-gradient">
+                      <i class="fas fa-star"></i>
+                      <span>95% Client Satisfaction</span>
+                    </div>
+                    <div class="trust-badge-item trust-badge-gradient">
+                      <i class="fas fa-award"></i>
+                      <span>15+ Expert Team</span>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-6 hero-image-wrapper">
@@ -54,10 +63,19 @@
                     <a routerLink="/services" class="btn btn-primary-custom">Explore AI Solutions</a>
                     <a routerLink="/contact" class="btn btn-outline-white">Book a Demo</a>
                   </div>
-                  <div class="hero-trust-badges">
-                    <span><i class="fas fa-check"></i> Chatbots & Assistants</span>
-                    <span><i class="fas fa-check"></i> Process Automation</span>
-                    <span><i class="fas fa-check"></i> Data Intelligence</span>
+                  <div class="hero-trust-badges hero-trust-professional">
+                    <div class="trust-badge-item trust-badge-ai">
+                      <i class="fas fa-comments"></i>
+                      <span>Chatbots & Assistants</span>
+                    </div>
+                    <div class="trust-badge-item trust-badge-ai">
+                      <i class="fas fa-cogs"></i>
+                      <span>Process Automation</span>
+                    </div>
+                    <div class="trust-badge-item trust-badge-ai">
+                      <i class="fas fa-brain"></i>
+                      <span>Data Intelligence</span>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-6 hero-image-wrapper">
@@ -85,10 +103,19 @@
                     <a routerLink="/products" class="btn btn-primary-custom">View Products</a>
                     <a routerLink="/contact" class="btn btn-outline-custom">Request Proposal</a>
                   </div>
-                  <div class="hero-trust-badges hero-trust-badges-dark">
-                    <span><i class="fas fa-shield-alt"></i> Enterprise Security</span>
-                    <span><i class="fas fa-headset"></i> 24/7 Support</span>
-                    <span><i class="fas fa-rocket"></i> Agile Delivery</span>
+                  <div class="hero-trust-badges hero-trust-professional">
+                    <div class="trust-badge-item">
+                      <i class="fas fa-shield-alt"></i>
+                      <span>Enterprise Security</span>
+                    </div>
+                    <div class="trust-badge-item">
+                      <i class="fas fa-headset"></i>
+                      <span>24/7 Support</span>
+                    </div>
+                    <div class="trust-badge-item">
+                      <i class="fas fa-rocket"></i>
+                      <span>Agile Delivery</span>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-6 hero-image-wrapper">
@@ -109,41 +136,154 @@
     </a>
   </section>
 
-  <!-- Tech Marquee -->
-  <div class="tech-marquee" aria-hidden="true">
-    <div class="tech-marquee-track">
-      <span>React</span><span>.NET</span><span>Laravel</span><span>Node.js</span><span>Flutter</span><span>Azure</span><span>AWS</span><span>PostgreSQL</span><span>AI / ML</span><span>TypeScript</span><span>Angular</span><span>DevOps</span>
-      <span>React</span><span>.NET</span><span>Laravel</span><span>Node.js</span><span>Flutter</span><span>Azure</span><span>AWS</span><span>PostgreSQL</span><span>AI / ML</span><span>TypeScript</span><span>Angular</span><span>DevOps</span>
-    </div>
-  </div>
-
-  <!-- Social Proof Bar -->
-  <section class="proof-bar" id="proof">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 col-md-3">
-          <div class="proof-item">
-            <span class="proof-number" data-count="100" data-suffix="+">0</span>
-            <span class="proof-label">Projects Delivered</span>
+  <!-- Tech Stack Section - Scrolling Marquee with Colorful Icons -->
+  <section class="tech-stack-section" aria-label="Technologies we use">
+    <div class="tech-stack-marquee">
+      <div class="tech-stack-track">
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-react">
+            <i class="fab fa-react"></i>
           </div>
+          <span>React</span>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="proof-item">
-            <span class="proof-number" data-count="50" data-suffix="+">0</span>
-            <span class="proof-label">Happy Clients</span>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-dotnet">
+            <i class="fas fa-code"></i>
           </div>
+          <span>.NET</span>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="proof-item">
-            <span class="proof-number" data-count="15" data-suffix="+">0</span>
-            <span class="proof-label">Expert Team</span>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-laravel">
+            <i class="fab fa-laravel"></i>
           </div>
+          <span>Laravel</span>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="proof-item">
-            <span class="proof-number" data-count="5" data-suffix="+">0</span>
-            <span class="proof-label">Years Experience</span>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-node">
+            <i class="fab fa-node-js"></i>
           </div>
+          <span>Node.js</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-flutter">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <span>Flutter</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-azure">
+            <i class="fab fa-microsoft"></i>
+          </div>
+          <span>Azure</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-aws">
+            <i class="fab fa-aws"></i>
+          </div>
+          <span>AWS</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-database">
+            <i class="fas fa-database"></i>
+          </div>
+          <span>PostgreSQL</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-ai">
+            <i class="fas fa-brain"></i>
+          </div>
+          <span>AI / ML</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-typescript">
+            <i class="fas fa-code"></i>
+          </div>
+          <span>TypeScript</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-angular">
+            <i class="fab fa-angular"></i>
+          </div>
+          <span>Angular</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-devops">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <span>DevOps</span>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-react">
+            <i class="fab fa-react"></i>
+          </div>
+          <span>React</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-dotnet">
+            <i class="fas fa-code"></i>
+          </div>
+          <span>.NET</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-laravel">
+            <i class="fab fa-laravel"></i>
+          </div>
+          <span>Laravel</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-node">
+            <i class="fab fa-node-js"></i>
+          </div>
+          <span>Node.js</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-flutter">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <span>Flutter</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-azure">
+            <i class="fab fa-microsoft"></i>
+          </div>
+          <span>Azure</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-aws">
+            <i class="fab fa-aws"></i>
+          </div>
+          <span>AWS</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-database">
+            <i class="fas fa-database"></i>
+          </div>
+          <span>PostgreSQL</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-ai">
+            <i class="fas fa-brain"></i>
+          </div>
+          <span>AI / ML</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-typescript">
+            <i class="fas fa-code"></i>
+          </div>
+          <span>TypeScript</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-angular">
+            <i class="fab fa-angular"></i>
+          </div>
+          <span>Angular</span>
+        </div>
+        <div class="tech-stack-item">
+          <div class="tech-icon tech-icon-devops">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <span>DevOps</span>
         </div>
       </div>
     </div>
@@ -160,7 +300,7 @@
         </div>
         <div class="col-lg-6 fade-in about-content">
           <span class="section-badge">About Us</span>
-          <h2 class="section-heading">Technology Partner For Ambitious Businesses</h2>
+          <h2 class="section-heading">Technology Partner For <span class="text-orange">Ambitious Businesses</span></h2>
           <p>We help organizations transform ideas into scalable digital products through strategic planning, innovative design, and robust software development.</p>
           <div class="mvv-cards">
             <div class="mvv-card">
@@ -195,7 +335,7 @@
     <div class="container">
       <div class="text-center fade-in">
         <span class="section-label">Services</span>
-        <h2 class="section-heading">Solutions designed for growth</h2>
+        <h2 class="section-heading">Solutions designed for <span class="text-orange">growth</span></h2>
         <p class="section-subheading">End-to-end technology services for businesses of every size.</p>
       </div>
       <div id="servicesCarousel" class="carousel slide carousel-minimal fade-in" data-bs-ride="carousel" data-bs-interval="6000">
@@ -206,7 +346,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="row g-3">
+            <div class="row g-4">
               <div class="col-md-4">
                 <div class="service-card">
                   <div class="service-icon"><i class="fas fa-code"></i></div>
@@ -234,7 +374,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="row g-3">
+            <div class="row g-4">
               <div class="col-md-4">
                 <div class="service-card">
                   <div class="service-icon"><i class="fas fa-robot"></i></div>
@@ -262,7 +402,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="row g-3">
+            <div class="row g-4">
               <div class="col-md-4">
                 <div class="service-card">
                   <div class="service-icon"><i class="fas fa-database"></i></div>
@@ -305,7 +445,7 @@
     <div class="container">
       <div class="text-center fade-in">
         <span class="section-label">Products</span>
-        <h2 class="section-heading">Built to simplify operations</h2>
+        <h2 class="section-heading">Built to simplify <span class="text-orange">operations</span></h2>
         <p class="section-subheading">Ready-made software for specific industries and business needs.</p>
       </div>
       <div id="productsCarousel" class="carousel slide carousel-minimal fade-in" data-bs-ride="carousel" data-bs-interval="7000">
@@ -315,7 +455,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="row g-3">
+            <div class="row g-4">
               <div class="col-md-4">
                 <div class="product-card">
                   <div class="product-image"><img src="https://images.unsplash.com/photo-1503676260728-1c00da280a02?w=600&q=80" alt="School Management" loading="lazy"></div>
@@ -349,7 +489,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="row g-3">
+            <div class="row g-4">
               <div class="col-md-4">
                 <div class="product-card">
                   <div class="product-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="ERP" loading="lazy"></div>
@@ -398,7 +538,7 @@
     <div class="container">
       <div class="text-center fade-in">
         <span class="section-badge" style="background:rgba(248,154,5,0.2);">Why Wellyx</span>
-        <h2 class="section-heading">Why Businesses Trust Wellyx</h2>
+        <h2 class="section-heading">Why Businesses Trust <span class="text-orange">Wellyx</span></h2>
         <p class="section-subheading">We combine technical expertise with business understanding to deliver results.</p>
       </div>
       <div class="row g-4">
@@ -459,7 +599,7 @@
     <div class="container">
       <div class="text-center fade-in">
         <span class="section-badge">Industries</span>
-        <h2 class="section-heading">Industries We Empower</h2>
+        <h2 class="section-heading">Industries We <span class="text-orange">Empower</span></h2>
         <p class="section-subheading">Specialized solutions tailored for diverse industry verticals.</p>
       </div>
       <div class="row g-4">
@@ -496,7 +636,7 @@
     <div class="container">
       <div class="text-center fade-in">
         <span class="section-label">Portfolio</span>
-        <h2 class="section-heading">Success stories</h2>
+        <h2 class="section-heading">Success <span class="text-orange">stories</span></h2>
         <p class="section-subheading">Real projects delivering measurable results.</p>
       </div>
       <div id="showcaseCarousel" class="carousel slide carousel-minimal showcase-carousel fade-in mb-5" data-bs-ride="carousel" data-bs-interval="8000">
@@ -515,7 +655,10 @@
                 <p>A full-featured learning management system for a network of schools with real-time analytics.</p>
                 <div class="showcase-metrics">
                   <span><strong>45%</strong> more engagement</span>
-                  <span><strong>React</strong> + .NET</span>
+                  <div class="tech-badges">
+                    <span class="tech-badge tech-react"><i class="fab fa-react"></i> React</span>
+                    <span class="tech-badge tech-dotnet"><i class="fas fa-code"></i> .NET</span>
+                  </div>
                 </div>
                 <a routerLink="/portfolio" class="btn btn-outline-custom btn-sm">View case study</a>
               </div>
@@ -530,7 +673,10 @@
                 <p>Unified supply chain, inventory, and finance modules for a manufacturing company.</p>
                 <div class="showcase-metrics">
                   <span><strong>70%</strong> less manual work</span>
-                  <span><strong>.NET</strong> + SQL</span>
+                  <div class="tech-badges">
+                    <span class="tech-badge tech-dotnet"><i class="fas fa-code"></i> .NET</span>
+                    <span class="tech-badge tech-sql"><i class="fas fa-database"></i> SQL</span>
+                  </div>
                 </div>
                 <a routerLink="/portfolio" class="btn btn-outline-custom btn-sm">View case study</a>
               </div>
@@ -545,7 +691,10 @@
                 <p>Intelligent chatbot handling 80% of customer queries with seamless human handoff.</p>
                 <div class="showcase-metrics">
                   <span><strong>80%</strong> faster response</span>
-                  <span><strong>Python</strong> + OpenAI</span>
+                  <div class="tech-badges">
+                    <span class="tech-badge tech-python"><i class="fab fa-python"></i> Python</span>
+                    <span class="tech-badge tech-ai"><i class="fas fa-brain"></i> OpenAI</span>
+                  </div>
                 </div>
                 <a routerLink="/portfolio" class="btn btn-outline-custom btn-sm">View case study</a>
               </div>
@@ -689,50 +838,50 @@
     <div class="container">
       <div class="text-center fade-in mb-4">
         <span class="section-label">Tech Stack</span>
-        <h2 class="section-heading">Technologies we master</h2>
+        <h2 class="section-heading">Technologies we <span class="text-orange">master</span></h2>
         <p class="section-subheading">Modern tools and frameworks powering our solutions.</p>
       </div>
     </div>
     <div class="tech-marquee-row fade-in">
       <div class="tech-marquee-track ltr">
-        <span><i class="fab fa-html5"></i> HTML5</span>
-        <span><i class="fab fa-css3-alt"></i> CSS3</span>
-        <span><i class="fab fa-js"></i> JavaScript</span>
-        <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
-        <span><i class="fab fa-react"></i> React</span>
-        <span><i class="fab fa-angular"></i> Angular</span>
-        <span><i class="fab fa-vuejs"></i> Vue.js</span>
-        <span><i class="fab fa-figma"></i> Figma</span>
-        <span><i class="fab fa-html5"></i> HTML5</span>
-        <span><i class="fab fa-css3-alt"></i> CSS3</span>
-        <span><i class="fab fa-js"></i> JavaScript</span>
-        <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
-        <span><i class="fab fa-react"></i> React</span>
-        <span><i class="fab fa-angular"></i> Angular</span>
-        <span><i class="fab fa-vuejs"></i> Vue.js</span>
-        <span><i class="fab fa-figma"></i> Figma</span>
+        <span class="tech-item-html5"><i class="fab fa-html5"></i> HTML5</span>
+        <span class="tech-item-css3"><i class="fab fa-css3-alt"></i> CSS3</span>
+        <span class="tech-item-js"><i class="fab fa-js"></i> JavaScript</span>
+        <span class="tech-item-bootstrap"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+        <span class="tech-item-react"><i class="fab fa-react"></i> React</span>
+        <span class="tech-item-angular"><i class="fab fa-angular"></i> Angular</span>
+        <span class="tech-item-vue"><i class="fab fa-vuejs"></i> Vue.js</span>
+        <span class="tech-item-figma"><i class="fab fa-figma"></i> Figma</span>
+        <span class="tech-item-html5"><i class="fab fa-html5"></i> HTML5</span>
+        <span class="tech-item-css3"><i class="fab fa-css3-alt"></i> CSS3</span>
+        <span class="tech-item-js"><i class="fab fa-js"></i> JavaScript</span>
+        <span class="tech-item-bootstrap"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+        <span class="tech-item-react"><i class="fab fa-react"></i> React</span>
+        <span class="tech-item-angular"><i class="fab fa-angular"></i> Angular</span>
+        <span class="tech-item-vue"><i class="fab fa-vuejs"></i> Vue.js</span>
+        <span class="tech-item-figma"><i class="fab fa-figma"></i> Figma</span>
       </div>
     </div>
     <div class="tech-marquee-row fade-in">
       <div class="tech-marquee-track rtl">
-        <span><i class="fab fa-microsoft"></i> .NET</span>
-        <span><i class="fab fa-laravel"></i> Laravel</span>
-        <span><i class="fab fa-node-js"></i> Node.js</span>
-        <span><i class="fas fa-database"></i> SQL Server</span>
-        <span><i class="fas fa-database"></i> MySQL</span>
-        <span><i class="fas fa-database"></i> PostgreSQL</span>
-        <span><i class="fab fa-aws"></i> AWS</span>
-        <span><i class="fab fa-microsoft"></i> Azure</span>
-        <span><i class="fab fa-google"></i> Google Cloud</span>
-        <span><i class="fab fa-microsoft"></i> .NET</span>
-        <span><i class="fab fa-laravel"></i> Laravel</span>
-        <span><i class="fab fa-node-js"></i> Node.js</span>
-        <span><i class="fas fa-database"></i> SQL Server</span>
-        <span><i class="fas fa-database"></i> MySQL</span>
-        <span><i class="fas fa-database"></i> PostgreSQL</span>
-        <span><i class="fab fa-aws"></i> AWS</span>
-        <span><i class="fab fa-microsoft"></i> Azure</span>
-        <span><i class="fab fa-google"></i> Google Cloud</span>
+        <span class="tech-item-dotnet"><i class="fab fa-microsoft"></i> .NET</span>
+        <span class="tech-item-laravel"><i class="fab fa-laravel"></i> Laravel</span>
+        <span class="tech-item-nodejs"><i class="fab fa-node-js"></i> Node.js</span>
+        <span class="tech-item-sqlserver"><i class="fas fa-database"></i> SQL Server</span>
+        <span class="tech-item-mysql"><i class="fas fa-database"></i> MySQL</span>
+        <span class="tech-item-postgres"><i class="fas fa-database"></i> PostgreSQL</span>
+        <span class="tech-item-aws"><i class="fab fa-aws"></i> AWS</span>
+        <span class="tech-item-azure"><i class="fab fa-microsoft"></i> Azure</span>
+        <span class="tech-item-gcloud"><i class="fab fa-google"></i> Google Cloud</span>
+        <span class="tech-item-dotnet"><i class="fab fa-microsoft"></i> .NET</span>
+        <span class="tech-item-laravel"><i class="fab fa-laravel"></i> Laravel</span>
+        <span class="tech-item-nodejs"><i class="fab fa-node-js"></i> Node.js</span>
+        <span class="tech-item-sqlserver"><i class="fas fa-database"></i> SQL Server</span>
+        <span class="tech-item-mysql"><i class="fas fa-database"></i> MySQL</span>
+        <span class="tech-item-postgres"><i class="fas fa-database"></i> PostgreSQL</span>
+        <span class="tech-item-aws"><i class="fab fa-aws"></i> AWS</span>
+        <span class="tech-item-azure"><i class="fab fa-microsoft"></i> Azure</span>
+        <span class="tech-item-gcloud"><i class="fab fa-google"></i> Google Cloud</span>
       </div>
     </div>
   </section>
@@ -742,7 +891,7 @@
     <div class="container">
       <div class="text-center fade-in">
         <span class="section-label">Our Process</span>
-        <h2 class="section-heading">How We Deliver Excellence</h2>
+        <h2 class="section-heading">How We Deliver <span class="text-orange">Excellence</span></h2>
         <p class="section-subheading">A proven six-step methodology from idea to launch and beyond.</p>
       </div>
       <div class="process-grid fade-in">
@@ -791,7 +940,7 @@
     <div class="container">
       <div class="text-center fade-in">
         <span class="section-label">Testimonials</span>
-        <h2 class="section-heading">What clients say</h2>
+        <h2 class="section-heading">What clients <span class="text-orange">say</span></h2>
       </div>
       <div id="testimonialsCarousel" class="carousel slide carousel-minimal fade-in" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-indicators">
@@ -804,10 +953,16 @@
             <div class="row justify-content-center">
               <div class="col-lg-7">
                 <div class="testimonial-card">
+                  <i class="fas fa-quote-right testimonial-quote"></i>
                   <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                  <p class="testimonial-text">Wellyx transformed our school management completely. Their team delivered a robust system that reduced our administrative workload by 60%.</p>
-                  <div class="testimonial-author">Ahmed Hassan</div>
-                  <div class="testimonial-company">Green Valley School</div>
+                  <p class="testimonial-text">"Wellyx transformed our school management completely. Their team delivered a robust system that reduced our administrative workload by 60%."</p>
+                  <div class="testimonial-profile">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80" alt="Ahmed Hassan" class="testimonial-avatar" loading="lazy">
+                    <div class="testimonial-info">
+                      <div class="testimonial-author">Ahmed Hassan</div>
+                      <div class="testimonial-company">Green Valley School</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -816,10 +971,16 @@
             <div class="row justify-content-center">
               <div class="col-lg-7">
                 <div class="testimonial-card">
+                  <i class="fas fa-quote-right testimonial-quote"></i>
                   <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                  <p class="testimonial-text">The ERP solution streamlined our entire supply chain. Professional team, on-time delivery, and excellent post-launch support.</p>
-                  <div class="testimonial-author">Sarah Mitchell</div>
-                  <div class="testimonial-company">TechManufacture Ltd.</div>
+                  <p class="testimonial-text">"The ERP solution streamlined our entire supply chain. Professional team, on-time delivery, and excellent post-launch support."</p>
+                  <div class="testimonial-profile">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80" alt="Sarah Mitchell" class="testimonial-avatar" loading="lazy">
+                    <div class="testimonial-info">
+                      <div class="testimonial-author">Sarah Mitchell</div>
+                      <div class="testimonial-company">TechManufacture Ltd.</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -828,10 +989,16 @@
             <div class="row justify-content-center">
               <div class="col-lg-7">
                 <div class="testimonial-card">
+                  <i class="fas fa-quote-right testimonial-quote"></i>
                   <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                  <p class="testimonial-text">Their AI chatbot increased our customer support efficiency by 80%. Wellyx truly understands how to leverage technology for growth.</p>
-                  <div class="testimonial-author">James Wilson</div>
-                  <div class="testimonial-company">RetailMax Inc.</div>
+                  <p class="testimonial-text">"Their AI chatbot increased our customer support efficiency by 80%. Wellyx truly understands how to leverage technology for growth."</p>
+                  <div class="testimonial-profile">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80" alt="James Wilson" class="testimonial-avatar" loading="lazy">
+                    <div class="testimonial-info">
+                      <div class="testimonial-author">James Wilson</div>
+                      <div class="testimonial-company">RetailMax Inc.</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -847,29 +1014,12 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container fade-in">
-      <h2 class="section-heading">Ready To Transform Your Business?</h2>
-      <p>Let's discuss your goals and build technology that creates measurable business results.</p>
-      <div class="cta-buttons">
-        <a routerLink="/contact" class="btn btn-white"><i class="fas fa-calendar-check"></i> Schedule Consultation</a>
-        <a routerLink="/contact" class="btn btn-outline-white"><i class="fas fa-file-alt"></i> Request Proposal</a>
-      </div>
-      <div class="cta-trust-badges">
-        <span><i class="fas fa-check-circle"></i> Free Consultation</span>
-        <span><i class="fas fa-check-circle"></i> No Obligation</span>
-        <span><i class="fas fa-check-circle"></i> 24hr Response</span>
-      </div>
-    </div>
-  </section>
-
   <!-- Contact Section -->
   <section class="contact-section" id="contact">
     <div class="container">
       <div class="text-center fade-in">
         <span class="section-badge">Contact Us</span>
-        <h2 class="section-heading">Let's Start Your Project</h2>
+        <h2 class="section-heading">Let's Start <span class="text-orange">Your Project</span></h2>
         <p class="section-subheading">Get in touch with us for a free consultation and project estimate.</p>
       </div>
       <div class="row g-4 align-items-stretch">
@@ -921,5 +1071,25 @@
     </div>
   </section>
 
+  <!-- CTA Section - Final Call to Action -->
+  <section class="cta-section cta-section-final">
+    <div class="container fade-in">
+      <div class="cta-box-glow">
+        <h2 class="section-heading">Ready To <span class="text-brand">Transform</span> Your Business?</h2>
+        <p>Let's discuss your goals and build technology that creates measurable business results.</p>
+        <div class="cta-buttons">
+          <a routerLink="/contact" class="btn btn-white"><i class="fas fa-calendar-check"></i> Schedule Consultation</a>
+          <a routerLink="/contact" class="btn btn-outline-white"><i class="fas fa-file-alt"></i> Request Proposal</a>
+        </div>
+        <div class="cta-trust-badges">
+          <span><i class="fas fa-check-circle"></i> Free Consultation</span>
+          <span><i class="fas fa-check-circle"></i> No Obligation</span>
+          <span><i class="fas fa-check-circle"></i> 24hr Response</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <!-- WhatsApp Float Button -->
+

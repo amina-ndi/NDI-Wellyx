@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top" [class.scrolled]="scrolled" [class.navbar-hero-dark]="heroDark">
   <div class="container">
-    <a class="navbar-brand" routerLink="/">Welly<span class="brand-accent">x</span></a>
+    <a class="navbar-brand" routerLink="/">
+      <img src="ndi-logo.jpg" alt="NDI Developers Inc." class="brand-logo">
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -17,7 +19,7 @@
           <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeNav()">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" routerLink="/services" data-bs-toggle="dropdown">Services</a>
+          <a class="nav-link dropdown-toggle" routerLink="/services" routerLinkActive="active" data-bs-toggle="dropdown">Services</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" routerLink="/services" (click)="closeNav()">All Services</a></li>
             <li><a class="dropdown-item" routerLink="/services" fragment="custom-software" (click)="closeNav()">Custom Software</a></li>
@@ -27,7 +29,7 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" routerLink="/products" data-bs-toggle="dropdown">Products</a>
+          <a class="nav-link dropdown-toggle" routerLink="/products" routerLinkActive="active" data-bs-toggle="dropdown">Products</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" routerLink="/products" (click)="closeNav()">All Products</a></li>
             <li><a class="dropdown-item" routerLink="/products" (click)="closeNav()">School Management</a></li>

@@ -1,7 +1,7 @@
-<section class="page-hero">
+<section class="page-hero hero-contact">
     <div class="container fade-in">
       <div class="breadcrumb-custom"><a routerLink="/">Home</a> <span>/</span> <span>Contact</span></div>
-      <h1 class="section-heading">Get In Touch</h1>
+      <h1 class="section-heading">Get In <span class="text-brand">Touch</span></h1>
       <p>Ready to start your project? We'd love to hear from you. Get a free consultation today.</p>
     </div>
   </section>
@@ -47,36 +47,64 @@
     </div>
   </section>
 
-  <section class="section-padding bg-light-custom">
+  <section class="faq-section">
     <div class="container">
-      <div class="text-center fade-in">
-        <h2 class="section-heading">Frequently Asked Questions</h2>
+      <div class="text-center fade-in mb-5">
+        <h2 class="section-heading">Frequently Asked <span class="text-orange">Questions</span></h2>
+        <p class="section-subheading">Quick answers to common questions about our services</p>
       </div>
-      <div class="row justify-content-center mt-4">
-        <div class="col-lg-8 fade-in">
-          <div class="accordion" id="faqAccordion">
-            <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 fade-in">
+          <div class="accordion faq-accordion" id="faqAccordion">
+            <div class="accordion-item faq-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">How much does a custom software project cost?</button>
+                <button class="accordion-button faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  <span>How much does a custom software project cost?</span>
+                </button>
               </h2>
               <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Project costs vary based on complexity, features, and timeline. We provide detailed quotations after understanding your requirements during a free consultation.</div>
+                <div class="accordion-body faq-answer">
+                  Project costs vary based on complexity, features, and timeline. We provide detailed quotations after understanding your requirements during a free consultation. Our transparent pricing ensures you know exactly what you're paying for with no hidden costs.
+                </div>
               </div>
             </div>
-            <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+            
+            <div class="accordion-item faq-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What is your typical project timeline?</button>
+                <button class="accordion-button faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  <span>What is your typical project timeline?</span>
+                </button>
               </h2>
               <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Timelines range from 4-8 weeks for simple projects to 3-6 months for complex enterprise solutions. We provide a detailed timeline during the planning phase.</div>
+                <div class="accordion-body faq-answer">
+                  Timelines range from 4-8 weeks for simple projects to 3-6 months for complex enterprise solutions. We provide a detailed timeline during the planning phase and keep you updated throughout the development process with regular progress reports.
+                </div>
               </div>
             </div>
-            <div class="accordion-item border-0 mb-3 rounded overflow-hidden">
+            
+            <div class="accordion-item faq-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Do you provide post-launch support?</button>
+                <button class="accordion-button faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  <span>Do you provide post-launch support?</span>
+                </button>
               </h2>
               <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Yes, we offer comprehensive post-launch support including maintenance, updates, bug fixes, and feature enhancements through flexible support packages.</div>
+                <div class="accordion-body faq-answer">
+                  Yes, we offer comprehensive post-launch support including maintenance, updates, bug fixes, and feature enhancements through flexible support packages. Our dedicated team ensures your software runs smoothly 24/7.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  <span>What technologies do you work with?</span>
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body faq-answer">
+                  We specialize in modern tech stacks including React, Angular, .NET, Laravel, Node.js, Flutter, AI/ML, and cloud platforms (AWS, Azure). Our team stays updated with the latest technologies to deliver cutting-edge solutions that meet industry standards.
+                </div>
               </div>
             </div>
           </div>

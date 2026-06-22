@@ -1,0 +1,13 @@
+<svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Orange curved element -->
+  <path d="M15 8C15 8 25 4 30 15C32 20 31 28 28 32" stroke="#F89A05" stroke-width="8" stroke-linecap="round" fill="none"/>
+  
+  <!-- Red circle -->
+  <circle cx="38" cy="12" r="5" fill="#D90404"/>
+  
+  <!-- NOSHAHI text -->
+  <text x="50" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2C2C2C">NOSHAHI</text>
+  
+  <!-- DEVELOPERS INC. text -->
+  <text x="50" y="42" font-family="Arial, sans-serif" font-size="8" font-weight="normal" fill="#666666" letter-spacing="1">DEVELOPERS INC.</text>
+</svg>
