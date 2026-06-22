@@ -10,14 +10,14 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ServicesComponent } from './pages/services/services.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'Wellyx Software Inc. | Building Scalable Software Solutions' },
-  { path: 'about', component: AboutComponent, title: 'About Us | Wellyx Software Inc.' },
-  { path: 'services', component: ServicesComponent, title: 'Services | Wellyx Software Inc.' },
-  { path: 'products', component: ProductsComponent, title: 'Products | Wellyx Software Inc.' },
-  { path: 'portfolio', component: PortfolioComponent, title: 'Portfolio | Wellyx Software Inc.' },
-  { path: 'industries', component: IndustriesComponent, title: 'Industries | Wellyx Software Inc.' },
-  { path: 'contact', component: ContactComponent, title: 'Contact Us | Wellyx Software Inc.' },
-  { path: 'careers', component: CareersComponent, title: 'Careers | Wellyx Software Inc.' },
-  { path: 'blog', component: BlogComponent, title: 'Blog | Wellyx Software Inc.' },
+  { path: '', component: HomeComponent, title: 'Noshahi Developers Inc. | Building Scalable Software Solutions' },
+  { path: 'about', component: AboutComponent, title: 'About Us | Noshahi Developers Inc.' },
+  { path: 'services', component: ServicesComponent, title: 'Services | Noshahi Developers Inc.' },
+  { path: 'products', component: ProductsComponent, title: 'Products | Noshahi Developers Inc.' },
+  { path: 'portfolio', component: PortfolioComponent, title: 'Portfolio | Noshahi Developers Inc.' },
+  { path: 'industries', component: IndustriesComponent, title: 'Industries | Noshahi Developers Inc.' },
+  { path: 'contact', component: ContactComponent, title: 'Contact Us | Noshahi Developers Inc.' },
+  { path: 'careers', component: CareersComponent, title: 'Careers | Noshahi Developers Inc.' },
+  { path: 'blog', component: BlogComponent, title: 'Blog | Noshahi Developers Inc.' },
   { path: '**', redirectTo: '' },
 ];
