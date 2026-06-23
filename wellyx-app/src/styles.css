@@ -1,4 +1,4 @@
-/* Wellyx — Minimal Design System */
+/* Noshahi Developers Inc. — Minimal Design System */
 
 :root {
   --orange: #F89A05;
@@ -796,7 +796,7 @@ p { font-size: 0.9375rem; }
 /* Premium Redesigned Service Card */
 .service-card {
   background: var(--white);
-  border: 1px solid var(--gray-200);
+  border: 1px solid #8B0000; /* Red Border Base */
   border-radius: 16px;
   padding: 2rem;
   height: 100%;
@@ -817,7 +817,7 @@ p { font-size: 0.9375rem; }
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--orange) 0%, #ff8c00 100%);
+  background: linear-gradient(90deg, var(--orange) 0%, #ff8c00 100%); /* Orange gradient */
   opacity: 0;
   transition: opacity 0.4s ease;
   display: block;
@@ -825,8 +825,8 @@ p { font-size: 0.9375rem; }
 
 .service-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(248, 154, 5, 0.3);
-  box-shadow: 0 20px 40px rgba(248, 154, 5, 0.08);
+  border-color: var(--orange); /* Orange Border Hover */
+  box-shadow: 0 20px 40px rgba(248, 154, 5, 0.12); /* Orange Shadow */
 }
 
 .service-card:hover::before {
@@ -906,43 +906,133 @@ p { font-size: 0.9375rem; }
 }
 
 .service-card .learn-more:hover {
-  color: #ff8c00;
+  color: #ff8c00; /* Dark orange hover color */
 }
 
 .service-card:hover .learn-more i {
   transform: translateX(6px);
 }
 
-/* Products */
+/* Products - Premium Redesign */
 .product-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
   padding: 0;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  z-index: 1;
 }
 
-.product-image { height: 150px; overflow: hidden; flex-shrink: 0; }
-.product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
-.product-card:hover .product-image img { transform: scale(1.03); }
+.product-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(248, 154, 5, 0.35);
+  box-shadow: 0 20px 48px rgba(248, 154, 5, 0.1), 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.product-image { 
+  height: 200px; 
+  overflow: hidden; 
+  flex-shrink: 0; 
+  position: relative;
+}
+
+.product-image::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);
+  z-index: 1;
+}
+
+.product-image img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+
+.product-card:hover .product-image img { 
+  transform: scale(1.08); 
+}
 
 .product-body {
-  padding: 1.25rem 1.375rem 1.375rem;
+  padding: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
+  background: var(--white);
+  z-index: 2;
+  border-top: 3px solid var(--orange);
 }
 
-.product-body .btn { margin-top: auto; align-self: flex-start; }
+.product-body h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.625rem;
+  letter-spacing: -0.01em;
+}
 
-.product-features { list-style: none; margin: 0.75rem 0; padding: 0; }
+.product-body p {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.product-features { 
+  list-style: none; 
+  margin: 0 0 1.5rem 0; 
+  padding: 0; 
+  flex: 1;
+}
+
 .product-features li {
-  font-size: 0.8125rem;
-  padding: 0.15rem 0;
+  font-size: 0.9375rem;
+  padding: 0.35rem 0;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   color: var(--gray-600);
+  border-bottom: 1px solid var(--gray-100);
 }
 
-.product-features li i { color: var(--orange); font-size: 0.625rem; }
+.product-features li:last-child {
+  border-bottom: none;
+}
+
+.product-features li i { 
+  color: var(--orange); 
+  font-size: 0.875rem; 
+}
+
+.product-body .small.text-muted {
+  font-size: 0.875rem;
+  color: var(--orange) !important;
+  font-weight: 600;
+  background: var(--orange-soft);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem !important;
+  display: inline-block;
+}
+
+.product-body .btn { 
+  margin-top: auto; 
+  align-self: flex-start;
+  width: 100%;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
 
 /* Why */
 .why-section .section-heading { color: var(--white); }
@@ -962,7 +1052,7 @@ p { font-size: 0.9375rem; }
 .why-card p { color: rgba(255,255,255,0.55); font-size: 0.875rem; margin: 0; }
 .progress-bar-custom { display: none; }
 
-/* Industries */
+/* Industries - Premium Redesign */
 .industry-card {
   text-align: center;
   padding: 1.5rem 1rem;
@@ -972,6 +1062,98 @@ p { font-size: 0.9375rem; }
 .industry-card i { font-size: 1.25rem; color: var(--orange); margin-bottom: 0.625rem; }
 .industry-card h5 { font-size: 0.875rem; font-weight: 500; margin: 0; }
 .industry-card:hover { transform: none; }
+
+.industry-card-pro {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.industry-hover-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e67a00 0%, #cc6a00 100%); /* Dark Orange Background */
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.industry-card-pro:hover {
+  transform: translateY(-8px);
+  border-color: #cc6a00;
+  box-shadow: 0 20px 48px rgba(230, 122, 0, 0.15), 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.industry-card-pro:hover .industry-hover-effect {
+  opacity: 1;
+}
+
+.industry-icon-pro {
+  width: 64px;
+  height: 64px;
+  background: var(--orange-soft);
+  border-radius: 50%;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.industry-icon-pro i {
+  font-size: 1.5rem;
+  color: var(--orange);
+  transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.industry-card-pro:hover .industry-icon-pro {
+  background: var(--white);
+  border-color: #8B0000; /* Dark Red Border Line */
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.industry-card-pro:hover .industry-icon-pro i {
+  color: #8B0000; /* Dark Red Icon */
+}
+
+.industry-content-pro h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+  transition: color 0.45s ease;
+}
+
+.industry-card-pro:hover .industry-content-pro h4 {
+  color: var(--white); /* White Heading */
+}
+
+.industry-content-pro p {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  line-height: 1.65;
+  margin: 0;
+  transition: color 0.45s ease;
+}
+
+.industry-card-pro:hover .industry-content-pro p {
+  color: rgba(255, 255, 255, 0.9); /* White Text */
+}
 
 /* Portfolio */
 .portfolio-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; }
@@ -3209,6 +3391,184 @@ p { font-size: 0.9375rem; }
 .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+/* ——— Services Page — Larger Text for Readability ——— */
+.services-section .service-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.services-section .service-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.services-section .service-card .product-features li {
+  font-size: 0.9375rem;
+  padding: 0.25rem 0;
+}
+
+.services-section .service-card .learn-more {
+  font-size: 0.9375rem;
+}
+
+.process-section .section-heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+}
+
+.process-section .section-subheading {
+  font-size: 1.0625rem;
+  max-width: 580px;
+}
+
+.page-hero p {
+  font-size: 1.1875rem;
+}
+
+.cta-section .section-heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+}
+
+.cta-section p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+/* ——— Process Cards — Premium Redesign ——— */
+.process-grid-pro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.process-card-pro {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--orange);
+  border-radius: 0 16px 16px 0;
+  padding: 2.25rem 1.75rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Bottom decorative gradient line */
+.process-card-pro::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange) 0%, #8B0000 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* ——— HOVER: Red background + White text ——— */
+.process-card-pro:hover {
+  background: #e67a00; /* Dark Orange */
+  border-color: #e67a00;
+  border-left-color: #cc6a00;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(230, 122, 0, 0.22), 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.process-card-pro:hover::after {
+  transform: scaleX(1);
+  background: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+}
+
+/* Step number badge */
+.process-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, var(--orange) 0%, #ff8c00 100%);
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 14px rgba(248, 154, 5, 0.3);
+  transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.process-card-pro:hover .process-step-num {
+  background: var(--white);
+  color: var(--orange); /* Orange Number Hover */
+  border-color: #8B0000; /* Red Border Hover */
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Icon container */
+.process-card-pro-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--orange-soft);
+  border-radius: 14px;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.process-card-pro-icon i {
+  font-size: 1.5rem;
+  color: var(--orange);
+  transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.process-card-pro:hover .process-card-pro-icon {
+  background: var(--white);
+  border-color: #8B0000; /* Red Border Hover */
+  transform: scale(1.08);
+  box-shadow: none;
+}
+
+.process-card-pro:hover .process-card-pro-icon i {
+  color: #8B0000; /* Red Icon Hover */
+}
+
+/* Card title */
+.process-card-pro h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.625rem;
+  letter-spacing: -0.01em;
+  transition: color 0.35s ease;
+}
+
+.process-card-pro:hover h4 {
+  color: var(--white);
+}
+
+/* Card description */
+.process-card-pro p {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  line-height: 1.65;
+  margin: 0;
+  transition: color 0.35s ease;
+}
+
+.process-card-pro:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 /* Responsive */
 @media (max-width: 991.98px) {
   .process-grid {
@@ -3216,6 +3576,11 @@ p { font-size: 0.9375rem; }
   }
 
   .process-grid::before { display: none; }
+
+  .process-grid-pro {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
 
   .carousel-minimal { padding: 0 2rem; }
   .carousel-minimal .carousel-control-prev { left: 0; }
@@ -3250,6 +3615,11 @@ p { font-size: 0.9375rem; }
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
+  }
+
+  .process-grid-pro {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .blog-card-image { height: 180px; }

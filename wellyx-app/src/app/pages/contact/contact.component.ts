@@ -11,6 +11,6 @@ import { FadeInDirective } from '../../shared/directives/fade-in.directive';
   styleUrl: './contact.component.css',
 })
 export class ContactComponent {
-  contactSubject = 'New inquiry — Wellyx website (Contact page)';
+  contactSubject = 'New inquiry — Noshahi Developers Inc. website (Contact page)';
   contactHash = '';
 }

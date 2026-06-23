@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './contact-form.component.css',
 })
 export class ContactFormComponent implements OnInit {
-  @Input() subject = 'New inquiry — Wellyx website';
+  @Input() subject = 'New inquiry — Noshahi Developers Inc. website';
   @Input() redirectHash = '';
   @Input() showTitle = false;
   @Input() showExtendedFields = false;

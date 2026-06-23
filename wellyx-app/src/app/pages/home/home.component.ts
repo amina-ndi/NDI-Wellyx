@@ -13,7 +13,7 @@ import { NavbarService } from '../../shared/navbar/navbar.service';
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
-  contactSubject = 'New inquiry — Wellyx website (Homepage)';
+  contactSubject = 'New inquiry — Noshahi Developers Inc. website (Homepage)';
   contactHash = '#contact';
 
   activeFilter = 'all';
